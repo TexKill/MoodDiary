@@ -3,40 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assests/css/style.cssc">
+  <link rel="stylesheet" href="/assests/css/style.css">
   <title>MoodDiary</title>
 </head>
 <body>
   <div class="container">
     <header class="header">
       <div class="header__logo">MoodDiary</div>
-      <button class="header__themehbtn">🌙</button>
+      <button class="header__themehbtn">🌙 Dark</button>
     </header>
     <main class="main">
-      <section class="main__your-mood your-mood">
-        <input class="your-mood__input" type="text" placeholder="How was your day?">
-        <div class="your-mood__emoji">
-          <span class="your-mood__emoji-smile">😊</span>
-          <span class="your-mood__emoji-smile">😐</span>
-          <span class="your-mood__emoji-smile">😢</span>
-          <span class="your-mood__emoji-smile">😡</span>
-          <span class="your-mood__emoji-smile">😍</span>
+     <div class="main__content">
+      <section class="your-mood">
+        <div class="">
+          <textarea class="your-mood__input" name="" id="" placeholder="How was your day?" resize:none></textarea>
         </div>
-        <button class="your-mood__savebtn" type="submit">Save</button>
+        <div class="your-mood__emoji">
+          <button class="your-mood__emoji-smile">😊</button>
+          <button class="your-mood__emoji-smile">😐</button>
+          <button class="your-mood__emoji-smile">😢</button>
+          <button class="your-mood__emoji-smile">😡</button>
+          <button class="your-mood__emoji-smile">😍</button>
+        </div>
+        <button class="your-mood__savebtn" type="button">Save</button>
       </section>
-      <section class="main__your-records your-records">
+     </div>
+      <section class="your-records">
         <h2>Записи</h2>
         <div class="your-records__card">
-          <p class="your-records__duedate"></p>
-          <p class="your-records__smile"></p>
-          <p class="your-records__text"></p>
+          <p class="your-records__duedate">duedate</p>
+          <p class="your-records__smile">😊</p>
+          <p class="your-records__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos maiores ad aliquid non dolorem consequatur ullam illum dolores? Doloribus vel corrupti ea velit commodi alias quaerat itaque, unde obcaecati officiis.</p>
           <button class="your-records__editbtn">Edit</button>
           <button class="your-records__delbtn">Delete</button>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <p>©2025 | <a href="">GitHub</a> - TexKill</p>
+      <p>©2025 | <a target="_blank" href="https://github.com/TexKill">GitHub</a> - TexKill</p>
     </footer>
   </div>
 </body>

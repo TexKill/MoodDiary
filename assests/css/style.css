@@ -69,3 +69,69 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+body {
+  background-color: #949292;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 0 0;
+  padding: 20px 10px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #000;
+}
+.header__logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+.header__themehbtn {
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.main {
+  background-color: #fff;
+}
+.main__content {
+  padding: 10px;
+}
+
+.your-mood__input {
+  border: 1px solid #c5c5c5;
+  border-radius: 10px;
+  padding: 20px 10px;
+  width: 100%;
+  margin: 0 0 10px 0;
+  resize: none;
+}
+.your-mood__emoji {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 10px;
+}
+.your-mood__savebtn {
+  width: 100%;
+  background-color: #398e79;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 0;
+}

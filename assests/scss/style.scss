@@ -1,2 +1,76 @@
 // Reset styles
 @import "null.scss";
+body {
+  background-color: #949292;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+// Header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 0 0;
+  padding: 20px 10px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #000;
+  &__logo {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__themehbtn {
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+}
+// END Header
+// Main
+.main {
+  background-color: #fff;
+  &__content {
+    padding: 10px;
+  }
+}
+// Mood
+.your-mood {
+  &__input {
+    border: 1px solid #c5c5c5;
+    border-radius: 10px;
+    padding: 20px 10px;
+    width: 100%;
+    margin: 0 0 10px 0;
+    resize: none;
+  }
+  &__emoji {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    &-smile {
+
+    }
+  }
+  &__savebtn {
+    width: 100%;
+    background-color: #398e79;
+    color: #ffff;
+    border-radius: 8px;
+    padding: 10px 0;
+  }
+}
+// Records
+.your-records {
+  &__card {}
+  &__duedate {}
+  &__smile {} 
+  &__text {}
+  &__editbtn {}
+  &__delbtn {}
+}
+// END Main
+//Footer
+.footer{}
