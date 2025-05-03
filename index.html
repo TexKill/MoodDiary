@@ -9,35 +9,37 @@
 <body>
   <div class="container">
     <header class="header">
-      <div class="header__logo">MoodDiary</div>
+      <div><a class="header__logo" href="index.html">MoodDiary</a></div>
       <button class="header__themehbtn">🌙 Dark</button>
     </header>
     <main class="main">
-     <div class="main__content">
-      <section class="your-mood">
-        <div class="">
-          <textarea class="your-mood__input" name="" id="" placeholder="How was your day?" resize:none></textarea>
+    <section class="your-mood">
+      <div>
+        <textarea class="your-mood__input" name="" id="" placeholder="How was your day?" resize:none></textarea>
+      </div>
+      <div class="your-mood__emoji">
+        <button class="your-mood__emoji-smile">😊</button>
+        <button class="your-mood__emoji-smile">😐</button>
+        <button class="your-mood__emoji-smile">😢</button>
+        <button class="your-mood__emoji-smile">😡</button>
+        <button class="your-mood__emoji-smile">😍</button>
+      </div>
+      <button class="your-mood__savebtn" type="button">Save</button>
+    </section>
+    <h2 class="main__text">Records</h2>
+    <section class="your-records">
+      <div class="your-records__card">
+        <p class="your-records__duedate">3 april 2025</p>
+        <p class="your-records__smile">😊</p>
+        <p class="your-records__text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos maiores ad aliquid non dolorem consequatur ullam illum dolores? Doloribus vel corrupti ea velit commodi alias quaerat itaque, unde obcaecati officiis.
+        </p>
+        <div class="your-records__buttons">
+          <button class="your-records__buttons-editbtn">Edit</button>
+        <button class="your-records__buttons-delbtn">Delete</button>
         </div>
-        <div class="your-mood__emoji">
-          <button class="your-mood__emoji-smile">😊</button>
-          <button class="your-mood__emoji-smile">😐</button>
-          <button class="your-mood__emoji-smile">😢</button>
-          <button class="your-mood__emoji-smile">😡</button>
-          <button class="your-mood__emoji-smile">😍</button>
-        </div>
-        <button class="your-mood__savebtn" type="button">Save</button>
-      </section>
-     </div>
-      <section class="your-records">
-        <h2>Записи</h2>
-        <div class="your-records__card">
-          <p class="your-records__duedate">duedate</p>
-          <p class="your-records__smile">😊</p>
-          <p class="your-records__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos maiores ad aliquid non dolorem consequatur ullam illum dolores? Doloribus vel corrupti ea velit commodi alias quaerat itaque, unde obcaecati officiis.</p>
-          <button class="your-records__editbtn">Edit</button>
-          <button class="your-records__delbtn">Delete</button>
-        </div>
-      </section>
+      </div>
+    </section>
     </main>
     <footer class="footer">
       <p>©2025 | <a target="_blank" href="https://github.com/TexKill">GitHub</a> - TexKill</p>
