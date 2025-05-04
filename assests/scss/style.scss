@@ -5,6 +5,8 @@ body {
 }
 
 .container {
+  min-height: 100vh;
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
   font-family: sans-serif;
@@ -36,12 +38,15 @@ body {
 // END Header
 // Main
 .main {
+  flex-grow: 1;
+  flex-shrink: 0;
   &__text {
     font-size: 30px;
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 10px;
     color: #ffff;
+    height: 100%;
   }
 }
 // Mood
@@ -79,12 +84,12 @@ body {
 }
 // Records
 .your-records {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #c5c5c5;
   &__card {
-    
+    border-radius: 10px;
+    border: 2px solid #c5c5c5;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
   }
   &__duedate {
     font-weight: 600;
@@ -125,6 +130,5 @@ body {
   color: #ffff;
   font-weight: 600;
   margin-bottom: 15px;
-  margin-top: 20px;
   text-align: center;
 }
