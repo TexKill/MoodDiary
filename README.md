@@ -1,29 +1,27 @@
-MoodDiary 😊📝
+# MoodDiary 😊📝
+
 A web app for tracking your mood and feelings!
 
-Description
+## Description
+
 MoodDiary helps you record your mood throughout the day. It’s a simple and fun way to keep track of how you’re feeling and reflect over time. 🌈✨
 
-Features
-Easy and quick mood entry 🙂
+## Features
 
-View your mood history 📅
+- Easy and quick mood entry 🙂  
+- View your mood history 📅  
+- Clean, user-friendly design 🎨  
 
-Clean, user-friendly design 🎨
+## Technologies
 
-Technologies
-HTML
+- HTML
+- SCSS
+- CSS  
+- JavaScript  
 
-CSS
+## How to Run
 
-JavaScript
+1. Clone the repo:
 
-How to Run
-Clone the repo:
-
-git clone https://github.com/TexKill/MoodDiary.git
-
-Open index.html in your browser 🚀
-
-Contributing
-Want to help improve MoodDiary? Feel free to open issues or submit pull requests! 🤝
+   ```bash
+   git clone https://github.com/TexKill/MoodDiary.git
