@@ -15,14 +15,14 @@
     <main class="main">
     <section class="your-mood">
       <div>
-        <textarea class="your-mood__input" name="Mood" id="input-mood" placeholder="How was your day?" resize:none></textarea>
+        <textarea class="your-mood__input" name="Mood" id="input-mood" placeholder="How was your day?" resize:none required></textarea>
       </div>
       <div class="your-mood__emoji">
-        <button id="good" class="your-mood__emoji-smile" onclick="whatEmoji()">😊</button>
-        <button id="norm" class="your-mood__emoji-smile" onclick="whatEmoji()">😐</button>
-        <button id="bad" class="your-mood__emoji-smile" onclick="whatEmoji()">😢</button>
-        <button id="agry" class="your-mood__emoji-smile" onclick="whatEmoji()">😡</button>
-        <button id="verygood" class="your-mood__emoji-smile" onclick="whatEmoji()">😍</button>
+        <button class="your-mood__emoji-smile" onclick="whatEmoji1()">😊</button>
+        <button class="your-mood__emoji-smile" onclick="whatEmoji2()">😐</button>
+        <button class="your-mood__emoji-smile" onclick="whatEmoji3()">😢</button>
+        <button class="your-mood__emoji-smile" onclick="whatEmoji4()">😡</button>
+        <button class="your-mood__emoji-smile" onclick="whatEmoji5()">😍</button>
       </div>
       <button class="your-mood__savebtn" type="button" onclick="saveMood()">Save</button>
     </section>

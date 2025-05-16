@@ -6,7 +6,7 @@ body {
 
 .container {
   min-height: 100vh;
-  position: relative;
+  justify-content: space-between;
   max-width: 800px;
   margin: 0 auto;
   font-family: sans-serif;
@@ -38,8 +38,7 @@ body {
 // END Header
 // Main
 .main {
-  flex-grow: 1;
-  flex-shrink: 0;
+  flex: 1 1 auto;
   &__text {
     font-size: 30px;
     font-weight: 600;
@@ -70,7 +69,20 @@ body {
     margin-bottom: 10px;
     &-smile {
       background-color: #fff;
-      font-size: 50px;
+      font-size: 40px;
+      border-radius: 100%;
+      padding-bottom: 4px;
+      padding-left: 1px;
+    }
+    &-smile:hover{
+      background: #0b9d85;
+      vertical-align: middle;
+      transition: 0.3s;
+    }
+    &-smile:active{
+      background: #087966;
+      vertical-align: middle;
+      transition: 0.3s;
     }
   }
   &__savebtn {
@@ -108,27 +120,36 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    &-editbtn {
+    button {
       font-size: 20px;
       width: 50%;
       padding: 8px 0;
       border-radius: 8px;
       border: 2px solid #c5c5c5;
+      transition: 0.3s;
     }
-    &-delbtn {
-      font-size: 20px;
-      width: 50%;
-      padding: 8px 0;
-      border-radius: 8px;
-      border: 2px solid #c5c5c5;
+    button:hover {
+      background: #707070;
+      color: #fff;
+      border: 2px solid #565656;
     }
-  }
+}
+}
+.edit-textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-bottom: 8px;
+  resize: none;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
 }
 // END Main
 //Footer
 .footer{
   color: #ffff;
   font-weight: 600;
-  margin-bottom: 15px;
   text-align: center;
+  padding: 15px 0;
 }
