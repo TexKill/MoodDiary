@@ -1,3 +1,6 @@
+// =======================
+// Emoji selection
+// =======================
 let inputSmile = '';
 
 function whatEmoji1() { inputSmile = '😊'; }
@@ -6,6 +9,9 @@ function whatEmoji3() { inputSmile = '😢'; }
 function whatEmoji4() { inputSmile = '😡'; }
 function whatEmoji5() { inputSmile = '😍'; }
 
+// =======================
+// Save mood entry
+// =======================
 function saveMood() {
   const inputMood = document.getElementById('input-mood').value.trim();
   const dueDate = new Date();
@@ -42,7 +48,9 @@ function saveMood() {
   document.getElementById('input-mood').value = '';
 }
 
-// Delegating events to the Delete and Edit buttons
+// =======================
+// Delete + Edit entries
+// =======================
 document.addEventListener('click', function(e) {
   // DELETE
   if (e.target.classList.contains('your-records__buttons-delbtn')) {
@@ -58,23 +66,23 @@ document.addEventListener('click', function(e) {
     const textEl = card.querySelector('.your-records__text');
     const originalText = textEl.textContent;
 
-    // Create textarea
+    // Create textarea with current text
     const textarea = document.createElement('textarea');
     textarea.value = originalText;
     textarea.classList.add('edit-textarea');
     textarea.rows = 4;
 
-    // Save Button
+    // Create Save button
     const saveBtn = document.createElement('button');
     saveBtn.textContent = 'Save';
     saveBtn.classList.add('your-records__buttons-savebtn');
 
-    // Replace text with textarea
+    // Replace paragraph with textarea
     textEl.replaceWith(textarea);
-    e.target.style.display = 'none'; // Hide button Edit
+    e.target.style.display = 'none'; // hide Edit button
     e.target.parentElement.appendChild(saveBtn);
 
-    // Save processing
+    // Save new text on Save click
     saveBtn.addEventListener('click', () => {
       const newText = textarea.value.trim();
       if (newText !== '') {
@@ -84,8 +92,46 @@ document.addEventListener('click', function(e) {
 
         textarea.replaceWith(newP);
         saveBtn.remove();
-        e.target.style.display = 'inline-block';
+        e.target.style.display = 'inline-block'; // show Edit button again
       }
     });
   }
 });
+
+// =======================
+// Theme switcher (with localStorage)
+// =======================
+const themeBtn = document.querySelector('.header__themebtn');
+const themeLink = document.getElementById('theme-link');
+
+// Toggle between light and dark theme
+function toggleTheme() {
+  const currentHref = themeLink.getAttribute('href');
+  const isDark = currentHref.includes('style-dark.css');
+
+  if (isDark) {
+    themeLink.setAttribute('href', '/assests/css/style.css');
+    localStorage.setItem('theme', 'light');
+    themeBtn.textContent = '🌙 Dark';
+  } else {
+    themeLink.setAttribute('href', '/assests/css/style-dark.css');
+    localStorage.setItem('theme', 'dark');
+    themeBtn.textContent = '☀️ Light';
+  }
+}
+
+// Load saved theme on page load
+function loadTheme() {
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'dark') {
+    themeLink.setAttribute('href', '/assests/css/style-dark.css');
+    themeBtn.textContent = '☀️ Light';
+  } else {
+    themeLink.setAttribute('href', '/assests/css/style.css');
+    themeBtn.textContent = '🌙 Dark';
+  }
+}
+
+themeBtn.addEventListener('click', toggleTheme);
+window.addEventListener('DOMContentLoaded', loadTheme);
